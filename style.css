@@ -1,0 +1,8 @@
+/* one class, no inline styles → avoids CSP blocks */
+.hs-flag {
+    background-color: #0044cc !important;   /* blue */
+    color: #ffffff !important;              /* white text */
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  

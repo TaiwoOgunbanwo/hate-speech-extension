@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Hate Speech Detector",
+    "description": "Highlights hateful words on any webpage (prototype).",
+    "version": "1.0",
+  
+    "permissions": ["scripting", "activeTab","storage"],
+    "host_permissions": ["<all_urls>"],
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["st yle.css"],
+        "run_at": "document_idle",
+        "all_frames": true
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+  "options_page": "options.html",
+
+    "action": {
+      "default_title": "Hate Speech Detector",
+      "default_popup": "popup.html"
+    }
+  }
+  
